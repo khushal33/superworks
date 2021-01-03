@@ -17,9 +17,9 @@ badge : number = 0;
  
   }
   ngAfterContentChecked() {
-    this.mul =JSON.parse(localStorage.getItem("product"));
+    this.mul = JSON.parse(localStorage.getItem("product"));
     
-    console.log(this.mul.length);
+  
     if(this.mul != null){
      this.badge = this.mul.length ;
    }

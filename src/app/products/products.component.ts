@@ -12,7 +12,8 @@ export class ProductsComponent implements OnInit {
 product:Product;
 
   cart:Cart;
-  pre:any[];
+  pre = [];
+  epre = [];
    data = [];
   constructor(public productsData:ProductService) { }
 
@@ -21,9 +22,17 @@ product:Product;
    this.pre = JSON.parse(localStorage.getItem("product"));
   }
   
-  addToCart(product,pre,index){
-    this.pre.push( product);
-    localStorage.setItem('product',JSON.stringify(this.pre));
+  addToCart(product,pre){
+   
+    if(this.pre != null){
+      this.pre.push( product);
+      localStorage.setItem('product',JSON.stringify(this.pre));
+    }else{
+        this.epre.push(product);
+        localStorage.setItem('product',JSON.stringify(this.epre));
+    }
+   
+    
     
   }
   
