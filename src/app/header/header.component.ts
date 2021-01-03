@@ -16,7 +16,7 @@ badge : number = 0;
   ngOnInit(): void {
  
   }
-  ngAfterViewChecked() {
+  ngAfterContentChecked() {
     this.mul =JSON.parse(localStorage.getItem("product"));
     
     console.log(this.mul.length);

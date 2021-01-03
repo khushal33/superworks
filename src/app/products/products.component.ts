@@ -10,6 +10,7 @@ import { Cart } from '../shaired/cart';
 export class ProductsComponent implements OnInit {
   products :Product[];
 product:Product;
+
   cart:Cart;
   pre:any[];
    data = [];
@@ -19,14 +20,11 @@ product:Product;
    this.products =  this.productsData.getproducts();
    this.pre = JSON.parse(localStorage.getItem("product"));
   }
-  addToCart(product,pre){
-   
-    
-   
-    
+  
+  addToCart(product,pre,index){
     this.pre.push( product);
     localStorage.setItem('product',JSON.stringify(this.pre));
     
-  
   }
+  
 }

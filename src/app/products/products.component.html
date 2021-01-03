@@ -2,7 +2,7 @@
   <div class="container"  >
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       <div class="col" *ngFor="let product of products">
-        <div class="card" style="width: 18rem; height: 300px;">
+        <div class="card" style="width: 18rem; height: 350px;">
             <img style="height: 60%;" src="{{product.image}}" class="card-img-top" alt="...">
             <div class="card-body">
               <div class="row">
@@ -11,8 +11,8 @@
               </div>
              
             </div>
-            <div class="card-footer">
-              <a (click)="addToCart(product)" class="btn btn-block btn-warning">Add To Cart</a>
+            <div class="card-footer" >
+             <button  (click)="addToCart(product)" class="btn btn-block btn-warning">Add To Cart</button>
             </div>
           </div>
       </div>
