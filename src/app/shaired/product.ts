@@ -5,5 +5,5 @@ export class Product{
     image: string;
     price: string;
     quantity:number = 0;
-
+    toggle:boolean;
 }

@@ -6,14 +6,16 @@ export  const PRODUCTS : Product[] = [
         name: 'Pizza',
         image: '/assets/images/pizaa.jpg',
         price: '100',
-        quantity:0
+        quantity:0,
+        toggle:false
     },
     {
         id: '1',
         name: 'Burger',
         image: '/assets/images/burger.jpg',
         price: '80',
-        quantity:0
+        quantity:0,
+        toggle:false
       
     },
     {
@@ -21,7 +23,8 @@ export  const PRODUCTS : Product[] = [
         name: 'Noodels',
         image: '/assets/images/noodels.jpeg',
         price: '60',
-        quantity:0
+        quantity:0,
+        toggle:false
        
     },
     {
@@ -29,7 +32,8 @@ export  const PRODUCTS : Product[] = [
         name: 'Cake',
         image: '/assets/images/cake.jpg',
         price: '70',
-        quantity:0
+        quantity:0,
+        toggle:false
        
     }
 ];

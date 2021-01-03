@@ -20,20 +20,19 @@ product:Product;
   ngOnInit(): void {
    this.products =  this.productsData.getproducts();
    this.pre = JSON.parse(localStorage.getItem("product"));
-  }
   
-  addToCart(product,pre){
-   
+  }
+ 
+  addToCart(product,pre,index){
     if(this.pre != null){
       this.pre.push( product);
       localStorage.setItem('product',JSON.stringify(this.pre));
+      product.toggle = true;
     }else{
         this.epre.push(product);
         localStorage.setItem('product',JSON.stringify(this.epre));
-    }
-   
-    
-    
+        product.toggle = true;
+      }
   }
   
 }

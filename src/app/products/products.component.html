@@ -12,7 +12,8 @@
              
             </div>
             <div class="card-footer" >
-             <button  (click)="addToCart(product)" class="btn btn-block btn-warning">Add To Cart</button>
+              <button *ngIf="product.toggle == false" (click)="addToCart(product)" class="btn btn-block btn-warning">Add To Cart</button>
+              <button  *ngIf="product.toggle == true"  (click)="addToCart(product)" class="btn btn-block btn-warning">Added To Cart</button>
             </div>
           </div>
       </div>
