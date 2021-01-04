@@ -1,12 +1,15 @@
 <h3>Cart</h3>
-<div class="container">
+<div class="container" *ngIf="this.data.length != 0">
 <div class="card" >
   
     <div class="card-body"  >
-      <div class="row" *ngFor="let product of unique" >
+      <div class="row" *ngFor="let product of data" >
           
       <h5 class=" col-sm-6  col-md-6 col-lg-6 ">{{product.name}}</h5>
-      <p class=" col-sm-6  col-md-6  col-lg-6">$ {{product.price}} x {{product.quantity}}</p>
+      <p class=" col-sm-6  col-md-6  col-lg-6">$ {{product.price}} &nbsp; x &nbsp;
+        <button type="button" (click)="removeItem(product)" class="btn btn-sm btn-warning"> - </button>&nbsp; {{product.quantity}} &nbsp;
+        <button type="button" (click)="addItem(product)" class="btn btn-sm btn-warning">+</button>
+      </p>
      
       </div>
      
@@ -16,6 +19,10 @@
     </div>
   </div>
 </div>
+<div *ngIf="this.data.length == 0">
+    <h1>Your cart is empty</h1>
+</div>
+
 
 <div class="col col-lg-12 " style="padding: 30px;">
     <div class="row">

@@ -3,7 +3,7 @@ export class Product{
     id: string;
     name: string;
     image: string;
-    price: string;
+    price: number;
     quantity:number = 0;
     toggle:boolean;
 }

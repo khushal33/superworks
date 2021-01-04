@@ -8,8 +8,8 @@ import { Component, OnInit , Output, EventEmitter,Input } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
  
-mul:any[];
-
+pre:any[];
+mul = [];
 badge : number = 0;
   constructor() { }
 
@@ -17,13 +17,15 @@ badge : number = 0;
  
   }
   ngAfterContentChecked() {
-    this.mul = JSON.parse(localStorage.getItem("product"));
-    
-  
-    if(this.mul != null){
-     this.badge = this.mul.length ;
-   }
-  
+  this.sum();
   }
+
+  sum(){
+    this.pre = JSON.parse(localStorage.getItem("product"));
+    if(this.pre != null){
+      this.mul = this.pre.map(a => a.quantity);
+      this.badge = this.mul.reduce((a,b)=>a+b,0);
+  }
+}
  
 }
